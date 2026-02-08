@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Abas</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+.abas button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 #020617;
+}
+
+.abas button:hover {
+  background: #38bdf8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(56,189,248,0.4);
+}
+.abas button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #020617;
+}
+
+.conteudo {
+  display: none;
+  margin-top: 20px;
+  background: #111827;
+  padding: 15px;
+  border-radius: 10px;
+  animation: fade 0.4s ease;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="abas">
+  <button onclick="abrirAba('interesses')">Interesses</button>
+  <button onclick="abrirAba('experiencias')">Experiências</button>
+  <button onclick="abrirAba('sobre')">Sobre Mim</button>
+</div>
+
+<div id="interesses" class="conteudo">
+  <h3>Interesses</h3>
+  <h4>Ciência da Computação</h4>
+  <img src="file:///C:/Users/luizn/Desktop/nova pasta/matue.png" alt="Matue" width="100">
+  <h4>Programação</h4>
+  <img src="file:///C:/Users/luizn/Desktop/nova pasta/dev.png" alt="Dev" width="100">
+  <h4>Tecnologia</h4>
+  <img src="file:///C:/Users/luizn/Desktop/nova pasta/tecnologia.png" alt="Tecnologia" width="100">
+  <h4>inteligencia artificial</h4>
+  <img src="file:///C:/Users/luizn/Desktop/nova pasta/alexa.png" alt="Alexa" width="100">
+</div>
+
+<div id="experiencias" class="conteudo">
+  <h3>Experiências</h3>
+  <p>Dart, HTML, Informática Intermediária.</p>
+</div>
+
+<div id="sobre" class="conteudo">
+  <h3>Sobre Mim</h3>
+  <p>          Eu sou Luiz Nicolas, tenho 15 anos e moro em Teresina, no Piauí. Desde cedo eu já desenvolvi um grande interesse por tecnologia e pelo mundo da computação. Meu maior sonho é estudar Ciência da Computação e me tornar um programador de sucesso, trabalhando com desenvolvimento de software e criando projetos que possam impactar positivamente a vida das pessoas.
+
+          No meu tempo livre, gosto bastante de jogar simuladores de corrida, onde posso treinar habilidade, estratégia e concentração, além de assistir animes, que também fazem parte do meu dia a dia e me inspiram em criatividade e persistência.
+
+          Já possuo experiência com programação em Dart e HTML, conhecimentos que venho desenvolvendo com prática, curiosidade e muita vontade de aprender. Estou sempre buscando evoluir, estudando novas linguagens, ferramentas e conceitos ligados à tecnologia, pois acredito que o aprendizado constante é o caminho para alcançar meus objetivos e crescer na área de desenvolvimento de software.c</p>
+</div>
+
+<script>
+function abrirAba(nome) {
+
+  var conteudos = document.querySelectorAll(".conteudo");
+
+  conteudos.forEach(function(div) {
+    div.style.display = "none";
+  });
+
+  document.getElementById(nome).style.display = "block";
+}
+</script>
+
+</body>
+</html>
